@@ -7,3 +7,6 @@ React breaks down everything on the UI into small components, and the components
 3. What's the main difference between props and state?
 Props - (properties) describe the way a component is configured. Props are like function arguments in JS, and attributes in HTML. To send props into a component, use the same syntax as HTML attributes:
 e.g. <Person name="Amy" />
+
+4. What is JSX?
+JSX is a syntax extension to JS, it describes what the UI should look like. It produces React elements.
