@@ -10,3 +10,6 @@ e.g. <Person name="Amy" />
 
 4. What is JSX?
 JSX is a syntax extension to JS, it describes what the UI should look like. It produces React elements.
+
+5. What are virtual DOMS?
+React creates a virtual DOM in memory when the React app first renders. Then when the state of React elements changes, the virtual DOM also changes. Then the virtual DOM is compared with the actual DOM in the browser by some React library, e.g. ReactDOM. Only the parts that are different are updated to the actual DOM, versus reloading the whole HTML file. It speeds up the rendering of the pages significantly.
