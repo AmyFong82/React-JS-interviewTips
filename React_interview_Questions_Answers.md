@@ -3,3 +3,7 @@ React is a front-end JS library developed by Facebook for building web user inte
 
 2. What are React Components?
 React breaks down everything on the UI into small components, and the components are reusable. When the state of a component changes, React rerenders the component with the updated information.
+
+3. What's the main difference between props and state?
+Props - (properties) describe the way a component is configured. Props are like function arguments in JS, and attributes in HTML. To send props into a component, use the same syntax as HTML attributes:
+e.g. <Person name="Amy" />
