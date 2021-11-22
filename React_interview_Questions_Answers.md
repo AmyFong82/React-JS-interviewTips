@@ -13,3 +13,10 @@ JSX is a syntax extension to JS, it describes what the UI should look like. It p
 
 5. What are virtual DOMS?
 React creates a virtual DOM in memory when the React app first renders. Then when the state of React elements changes, the virtual DOM also changes. Then the virtual DOM is compared with the actual DOM in the browser by some React library, e.g. ReactDOM. Only the parts that are different are updated to the actual DOM, versus reloading the whole HTML file. It speeds up the rendering of the pages significantly.
+
+6. what are the major advantages to using react when building UIs?
+  - It increases application performance via the Virtual DOM model
+  - Improved coding efficiency with JSX
+  - The ability to reusable compoents across multiple projects
+  - Flexibility and extensibility through add-on tools provided by React's open source community.
+
