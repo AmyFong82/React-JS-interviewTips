@@ -41,5 +41,16 @@ function isPalindrome(x){
     return false;
   }
 
-  
+  //set a reversedNum variable
+  let reversedNum = 0
+  //the while part will stop the loop when the reversedNum is bigger than x, which means we have done half of the digits in x when it is an even number
+  while(reversedNum < x){
+    // get the last digit of x, using % 10.
+    reversedNum = reversedNum * 10 + x % 10
+    // get rid of the last digit of x by dividing it by 10.
+    x /= 10
+  }
+
+  // return the comparision of reversedNum and the half x, or if the original x is an odd num, then remove the last digit of reversedNum first, then compare the two.
+  return reversedNum == x || reversedNum / 10 == x
 }
