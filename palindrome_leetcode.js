@@ -36,8 +36,10 @@
 
 function isPalindrome(x){
   // check to see if x is negative, if it is negative, then it can't be a palindrome.
-  // check also to see if x ends with a "0", because of example 3 above, not a palindrome. 
-  if(x < 0 || x % 10 == 0){
+  // check also to see if x ends with a "0", because of example 3 above, not a palindrome.
+  // 0 on itself is a palindrome??
+  // The word palindrome comes from the Greek word palindromes, meaning “running back again”. All single digits are considered palindromes in a base 10 system: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9.
+  if(x < 0 || (x % 10 == 0 && x !=0)){
     return false;
   }
 
@@ -48,9 +50,12 @@ function isPalindrome(x){
     // get the last digit of x, using % 10.
     reversedNum = reversedNum * 10 + x % 10
     // get rid of the last digit of x by dividing it by 10.
-    x /= 10
+    // use the Math.trunc() to remove the floating points
+    x = Math.trunc(x/10)
   }
 
-  // return the comparision of reversedNum and the half x, or if the original x is an odd num, then remove the last digit of reversedNum first, then compare the two.
-  return reversedNum == x || reversedNum / 10 == x
+  // return the comparision of reversedNum and the half x, or if the original x is an odd num, then remove the last digit of reversedNum first, remove the fractional digits, then compare the two.
+  return reversedNum == x || Math.trunc(reversedNum / 10) == x
 }
+
+isPalindrome(12321)
